@@ -1,0 +1,24 @@
+BoxLayout:
+    orientation: 'vertical'
+    Label:
+        text: 'Enter the temperature'
+        size_hint_y: 0.3
+    TextInput:
+        id: input_value
+        text: ''
+        multiline: False
+        on_text_validate: app.to_celsius()
+    BoxLayout:
+        orientation: 'horizontal'
+        Button:
+            id: to_celsius
+            text: 'To Celsius (Default)'
+            on_press: app.to_celsius()
+        Button:
+            id: to_fahrenheit
+            text: 'To Fahrenheit'
+            on_press: app.to_fahrenheit()
+    Label:
+        id: output_value
+        text: 'Changes will appear'
+        color: (0, 1, 0, 1)
